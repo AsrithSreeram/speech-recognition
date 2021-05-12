@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Recognition</title>
+</head>
+<body>
+
+<div style = "margin: 20px">
+    <h1>Upload New File</h1>
+    <form method = "post" enctype="multipart/form-data"/>
+    <input type = "file" name = "file">
+    <br>
+    <input type = "submit" style = "background-color: #0191FE;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 20px" value = "Transcribe">
+</form>
+    {% if transcript != "" %}
+    <div id = "speechTranscriptContainer">
+        <h1>Transcript</h1>
+        <p id = "speechText">{{transcript}}</p>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
